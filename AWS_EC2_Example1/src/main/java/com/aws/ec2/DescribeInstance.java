@@ -14,7 +14,7 @@ import com.amazonaws.services.ec2.model.DescribeInstancesResult;
 public class DescribeInstance {
     private static final AWSCredentials credentials;
     private static String accessKeyID = "<accessKeyID>";
-    private static String secretAccessKey = "<accessKeyID>";
+    private static String secretAccessKey = "<secretAccessKey>";
     private static String region = "us-east-1";
     private static String instanceIds = "i-0552e3bfc783a9203";
 

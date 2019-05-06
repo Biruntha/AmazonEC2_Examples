@@ -18,7 +18,7 @@ public class DescribeInstanseTest {
     public static void testDescribeInstances() throws Exception {
 
         String accessKeyID = "<accessKeyID>";
-        String secretAccessKey = "<accessKeyID>";
+        String secretAccessKey = "<secretAccessKey>";
         String region = "us-east-1";
         String instanceIds = "i-0552e3bfc783a9203";
 
