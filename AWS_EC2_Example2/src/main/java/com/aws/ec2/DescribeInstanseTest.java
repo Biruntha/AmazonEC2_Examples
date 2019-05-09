@@ -19,6 +19,7 @@ public class DescribeInstanseTest {
 
         String accessKeyID = "<accessKeyID>";
         String secretAccessKey = "<secretAccessKey>";
+        String securityToken = "<securityToken>";
         String region = "us-east-1";
         String instanceIds = "i-0552e3bfc783a9203";
 
@@ -28,6 +29,7 @@ public class DescribeInstanseTest {
         TreeMap<String, String> awsHeaders = new TreeMap<>();
         awsHeaders.put("host", hostHeader);
         awsHeaders.put("content-type", "application/x-www-form-urlencoded; charset=utf-8");
+        awsHeaders.put("x-amz-security-token", securityToken);
 
         TreeMap<String, String> queryParametes = new TreeMap<>();
         queryParametes.put("Action", "DescribeInstances");
@@ -57,6 +59,7 @@ public class DescribeInstanseTest {
         }
         httpGet.setHeader("host", hostHeader);
         httpGet.setHeader("content-type", "application/x-www-form-urlencoded; charset=utf-8");
+        httpGet.setHeader("x-amz-security-token",securityToken );
 
         HttpResponse response = httpClient.execute(httpGet);
         int statusCode = response.getStatusLine().getStatusCode();
@@ -72,3 +75,4 @@ public class DescribeInstanseTest {
         testDescribeInstances();
     }
 }
+
